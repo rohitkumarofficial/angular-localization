@@ -4,6 +4,14 @@
   "newProjectRoot": "projects",
   "projects": {
     "angular-localization": {
+      "i18n": {
+        "sourceLocale":"en-US",
+        "locales":{
+          "es-PR":{
+            "translation": "src/locale/messages.es.xlf"
+          }
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,6 +25,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": [
+              "es-PR"
+            ],
             "outputPath": "dist/angular-localization",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -100,5 +111,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "8ccddc72-0f05-49da-8039-e742ac54d692"
   }
 }
